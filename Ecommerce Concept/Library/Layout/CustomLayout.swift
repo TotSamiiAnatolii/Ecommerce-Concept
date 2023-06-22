@@ -45,6 +45,7 @@ class CustomCenteredLayout: UICollectionViewFlowLayout {
 
         for attributes in rectAttributes where attributes.frame.intersects(visibleRect) {
             let distance = visibleRect.midX - attributes.center.x
+            print(distance)
             let normalizedDistance = distance / activeDistance
 
             if distance.magnitude < activeDistance {

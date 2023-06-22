@@ -12,7 +12,7 @@ final class CategoryCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                circleView.backgroundColor = Colors.orange
+                self.circleView.backgroundColor = Colors.orange
                 imageCategory.tintColor = .white
             } else {
                 self.circleView.backgroundColor = .white

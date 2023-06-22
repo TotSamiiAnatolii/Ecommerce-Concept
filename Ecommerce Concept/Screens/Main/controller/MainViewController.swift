@@ -144,10 +144,10 @@ final class MainViewController: UIViewController {
         model.map { model in
             let productData = try? Data(contentsOf: URL(string: model.picture)!)
             
-            let photoProduct = UIImage(data: productData!)
+            let photoProduct = UIImage(data: productData ?? Data())
             
             return ModelBestCell(
-                productPhoto: photoProduct!,
+                productPhoto: photoProduct ?? UIImage(),
                 productTitle: model.title,
                 priceDiscount: model.discountPrice,
                 priceNoDiscount: model.priceWithoutDiscount)
